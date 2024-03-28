@@ -6,11 +6,100 @@
 	//=================================================================================	
 	// Creature: Gnoll Assassin
 	//=================================================================================
+	"attack_tower"
+	{
+		"BaseClass"	"npc_dota_creature"
+		
+		"Model" "models/heroes/monkey_king/monkey_king.vmdl"
+		"Ability1" "sale_tower"
+		"Ability2" ""
+		"Ability3" ""
+		"Ability4" ""
+		//level
+		"Level"	"1"
+
+		"ModelScale" "1"
+
+		"HasInventory" "0"
+
+		"ConsideredHero" "0"
+
+		"BoundsHullName" "100"
+
+		"RingRadius" "100"
+
+		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
+
+		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_NONE"
+
+		"MovementSpeed" "200"
+
+		"StatusHealth" "1000"
+
+		"StatusHealthRegen" "1"
+
+		"ProjectileModel" "particles/units/heroes/hero_puck/puck_base_attack.vpcf"
+
+		"ProjectileSpeed" "1000"
+
+		"AttackRange" "1000"
+		"AttackRate" "1"
+		"AttackDamageMin" "51"
+		"AttackDamageMax" "61"
+
+	}
+
+	"slowed_tower"
+	{
+		"BaseClass"	"npc_dota_creature"
+		
+		"Model" "models/heroes/abaddon/abaddon.vmdl"
+		"Ability1" "sale_tower"
+		"Ability2" "slowed_area"
+		"Ability3" ""
+		"Ability4" ""
+		//level
+		"Level"	"1"
+
+		"ModelScale" "1"
+
+		"HasInventory" "0"
+
+		"ConsideredHero" "0"
+
+		"BoundsHullName" "100"
+
+		"RingRadius" "100"
+
+		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
+
+		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_NONE"
+
+		"MovementSpeed" "300"
+
+		"StatusHealth" "100"
+
+		"StatusHealthRegen" "1"
+
+		"ProjectileModel" "particles/econ/items/wraith_king/wraith_king_arcana/wk_arc_wraithfireblast.vpcf"
+
+		"ProjectileSpeed" "500"
+
+		"AttackRange" "1000"
+		"AttackRate" "2"
+		"AttackDamageMin" "11"
+		"AttackDamageMax" "21"
+
+	}
+	
+	//=================================================================================	
+	// Creature: Gnoll Assassin
+	//=================================================================================
 	"npc_dota_creature_gnoll_assassin"	
 	{
 		// General
 		//----------------------------------------------------------------
-		"Model"						"models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll_frost.vmdl"	// Model.
+		"Model"						"models/items/hex/fish_hex/fish_hex.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Ranged"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
@@ -30,15 +119,15 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"30"		// Damage range min.
-		"AttackDamageMax"			"36"		// Damage range max.
-		"AttackRate"				"1.6"		// Speed of attack.
-		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"0"		// Damage range min.
+		"AttackDamageMax"			"0"		// Damage range max.
+		"AttackRate"				"0"		// Speed of attack.
+		"AttackAnimationPoint"		"0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"0"		// Range within a target can be acquired.
+		"AttackRange"				"0"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/neutral_fx/gnoll_base_attack.vpcf" // Particle system model for projectile.
-		"ProjectileSpeed"			"1500"		// Speed of projectile.		     
+		"ProjectileSpeed"			"0"		// Speed of projectile.		     
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -54,7 +143,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		// Speed.			
+		"MovementSpeed"				"300"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -89,4 +178,6 @@
 			"XPGain"					"15"
 		}
 	}
+
+	
 }

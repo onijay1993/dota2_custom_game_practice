@@ -46,4 +46,97 @@
 			}
 		}
 	}
+	"slowed_area"
+		{
+			"BaseClass"						"ability_lua"
+			"ScriptFile"					"abilities/slowed_area"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"AbilityCastRange"		"600"
+			"AbilitySpecial"				
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"slow_radius"			"600"
+				}
+				"03"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"slow_percentage"		"20"
+				}
+				"03"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"slow_time"				"2"
+				}
+			}
+		}
+		
+	"create_attack_tower"
+		{
+			"BaseClass"						"ability_lua"
+			"ScriptFile"					"abilities/tower/create_attack_tower"
+			"AbilityTextureName"			"keeper_electric_detail"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+			"AbilityCastPoint"				"0.0"
+			"AbilityCooldown"				"0.0"
+			"AbilityManaCost"				"0"
+			"AbilityGoldCost"				"50"
+			"AbilityCastRange"				"4000"
+			"MaxLevel"						"1"
+			"AbilitySpecial"				
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"tower_id"				"1"
+				}
+			}
+		}
+		"create_slowed_tower"
+		{
+			"BaseClass"						"ability_lua"
+			"ScriptFile"					"abilities/tower/create_slowed_tower"
+			"AbilityTextureName"			"keeper_electric_detail"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+			"AbilityCastPoint"				"0.0"
+			"AbilityCooldown"				"0.0"
+			"AbilityManaCost"				"0"
+			"AbilityGoldCost"				"50"
+			"AbilityCastRange"				"4000"
+			"MaxLevel"						"1"
+			"AbilitySpecial"				
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"tower_id"				"2"
+				}
+			}
+		}
+		"sale_tower"
+		{
+			"BaseClass"						"ability_lua"
+			"ScriptFile"					"abilities/sale_tower"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+			"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
+			"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+			"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_PLAYER_CONTROLLED"
+			"CastFilterRejectCaster"		"1"
+			"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+			"AbilityType"				    "DOTA_ABILITY_TYPE_BASIC"
+			"AbilityCastPoint"				"0.2"
+			"AbilityCooldown"				"0"
+			"AbilityManaCost"				"0"
+			"AbilityCastRange"				"600"
+			"AbilitySpecial"				
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"goldRate"				"80"
+				}
+			}
+		}
 }

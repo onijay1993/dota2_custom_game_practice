@@ -12,4 +12,15 @@
 		"Ability1"					"templar_assassin_refraction_holdout"		// Ability 1
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 	}
+	"npc_dota_hero_monkey_king_plus"
+	{
+		"override_hero"				"npc_dota_hero_monkey_king"
+		"Ability1"					"create_attack_tower"
+		"Ability2"					"create_slowed_tower"
+		"Ability3"					""
+		"VisionNighttimeRange"		"99999"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"1000"
+		"Model"						"models/heroes/ogre_magi/ogre_magi.vmdl"
+	}
 }
